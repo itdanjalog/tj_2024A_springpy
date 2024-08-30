@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="web.mybatis.MyDao">
+
+    <insert id="addUser" parameterType="web.mybatis.User">
+        INSERT INTO user (name, age) VALUES (#{name}, #{age})
+    </insert>
+
+    <select id="findAll" resultType="web.mybatis.User">
+        SELECT * FROM user
+    </select>
+
+    <select id="findById" parameterType="int" resultType="web.mybatis.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <!-- Update 쿼리 정의 -->
+    <update id="updateUser" parameterType="web.mybatis.User">
+        UPDATE user
+        SET name = #{name},
+        age = #{age}
+        WHERE id = #{id}
+    </update>
+
+    <!-- Delete 쿼리 정의 -->
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+
+</mapper>
+
