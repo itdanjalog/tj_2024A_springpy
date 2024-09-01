@@ -40,3 +40,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/src/main/python/.idea/inspectionProfiles/profiles_settings.xml
+/src/main/python/.idea/.gitignore
+/src/main/python/.idea/misc.xml
+/src/main/python/.idea/modules.xml
+/src/main/python/.idea/vcs.xml
