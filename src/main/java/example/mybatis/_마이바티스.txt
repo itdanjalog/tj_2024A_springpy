@@ -31,8 +31,7 @@
     (4) 인터페이스 작성
         @Mapper
         public interface 인터페이스명{
-            // 추상메소드
-            반환타입 메소드명();
+            반환타입 메소드명(); // 추상메소드
         }
 
     (3) XML 작성
@@ -49,17 +48,20 @@
             </mapper>
 
             2-2 : 연동한 인터페이스의 추상메소드 매핑
-            <DML id="매핑할추상메소드" parameterType="매개변수타입" , resultType="반환타입" >
-            </DML>
+            <DML id="매핑할추상메소드" parameterType="매개변수타입" , resultType="반환타입" > </DML>
+                * parameterType , resultType : 일반적으로 1개의 타입만 가능하다. 다양한 타입 : Map , Dto
 
             * 각 DML 제공
-            - insert
+            - insert  * 기본 반환타입 : int( 레코드 등록 개수 )
                 <insert>  insert문   </insert>
+
             - select
                 <select>   select문   </select>
-            - update
+
+            - update * 기본 반환타입 : int( 레코드 수정 개수 )
                 <update>    update문  </update>
-            - delete
+
+            - delete * 기본 반환타입 : int( 레코드 삭제 개수 )
                 <delete>    delete문   </delete>
 
 
