@@ -1,0 +1,42 @@
+2024-09-02T13:07:49.374+09:00  WARN 6424 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[example.log]' package. Please check your configuration.
+2024-09-02T13:07:55.179+09:00  WARN 6424 --- [http-nio-8080-exec-1] example.log.LogController                : LogController warn log
+2024-09-02T13:07:55.181+09:00 ERROR 6424 --- [http-nio-8080-exec-1] example.log.LogController                : LogController error log
+2024-09-02T13:14:08.455+09:00  INFO 1884 --- [main] example.log.AppStart                     : Starting AppStart using Java 17.0.11 with PID 1884 (C:\Users\TJ-BU-703-강사PC\Desktop\tj_2024A_springpy\build\classes\java\main started by TJ-BU-703-강사PC in C:\Users\TJ-BU-703-강사PC\Desktop\tj_2024A_springpy)
+2024-09-02T13:14:08.459+09:00  INFO 1884 --- [main] example.log.AppStart                     : No active profile set, falling back to 1 default profile: "default"
+2024-09-02T13:14:09.655+09:00  WARN 1884 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[example.log]' package. Please check your configuration.
+2024-09-02T13:14:10.384+09:00  INFO 1884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-02T13:14:10.406+09:00  INFO 1884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-02T13:14:10.406+09:00  INFO 1884 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-02T13:14:10.488+09:00  INFO 1884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-02T13:14:10.489+09:00  INFO 1884 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1921 ms
+2024-09-02T13:14:11.397+09:00  INFO 1884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-02T13:14:11.798+09:00  INFO 1884 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8641b7d
+2024-09-02T13:14:11.801+09:00  INFO 1884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-02T13:14:12.006+09:00  INFO 1884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-02T13:14:12.017+09:00  INFO 1884 --- [main] example.log.AppStart                     : Started AppStart in 4.194 seconds (process running for 4.655)
+2024-09-02T13:16:10.129+09:00  INFO 15304 --- [main] example.log.AppStart                     : Starting AppStart using Java 17.0.11 with PID 15304 (C:\Users\TJ-BU-703-강사PC\Desktop\tj_2024A_springpy\build\classes\java\main started by TJ-BU-703-강사PC in C:\Users\TJ-BU-703-강사PC\Desktop\tj_2024A_springpy)
+2024-09-02T13:16:10.134+09:00  INFO 15304 --- [main] example.log.AppStart                     : No active profile set, falling back to 1 default profile: "default"
+2024-09-02T13:16:11.205+09:00  WARN 15304 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[example.log]' package. Please check your configuration.
+2024-09-02T13:16:11.968+09:00  INFO 15304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-02T13:16:11.989+09:00  INFO 15304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-02T13:16:11.990+09:00  INFO 15304 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-02T13:16:12.091+09:00  INFO 15304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-02T13:16:12.092+09:00  INFO 15304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1861 ms
+2024-09-02T13:16:13.019+09:00  INFO 15304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-02T13:16:13.446+09:00  INFO 15304 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bbb6f0
+2024-09-02T13:16:13.449+09:00  INFO 15304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-02T13:16:13.630+09:00  INFO 15304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-02T13:16:13.652+09:00  INFO 15304 --- [main] example.log.AppStart                     : Started AppStart in 4.115 seconds (process running for 4.572)
+2024-09-02T13:16:16.959+09:00  INFO 15304 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-02T13:16:17.009+09:00  INFO 15304 --- [http-nio-8080-exec-1] example.log.LogController                : LogController info log
+2024-09-02T13:16:17.010+09:00  WARN 15304 --- [http-nio-8080-exec-1] example.log.LogController                : LogController warn log
+2024-09-02T13:16:17.012+09:00 ERROR 15304 --- [http-nio-8080-exec-1] example.log.LogController                : LogController error log
+2024-09-02T13:16:17.013+09:00 ERROR 15304 --- [http-nio-8080-exec-1] example.log.LogService                   : LogController error log
+2024-09-02T13:19:20.042+09:00  INFO 15304 --- [http-nio-8080-exec-3] example.log.LogController                : LogController info log
+2024-09-02T13:19:20.043+09:00  WARN 15304 --- [http-nio-8080-exec-3] example.log.LogController                : LogController warn log
+2024-09-02T13:19:20.043+09:00 ERROR 15304 --- [http-nio-8080-exec-3] example.log.LogController                : LogController error log
+2024-09-02T13:19:20.043+09:00 ERROR 15304 --- [http-nio-8080-exec-3] example.log.LogService                   : LogController error log
+2024-09-02T13:19:24.473+09:00  INFO 15304 --- [http-nio-8080-exec-4] example.log.LogController                : LogController info log
+2024-09-02T13:19:24.473+09:00  WARN 15304 --- [http-nio-8080-exec-4] example.log.LogController                : LogController warn log
+2024-09-02T13:19:24.473+09:00 ERROR 15304 --- [http-nio-8080-exec-4] example.log.LogController                : LogController error log
+2024-09-02T13:19:24.473+09:00 ERROR 15304 --- [http-nio-8080-exec-4] example.log.LogService                   : LogController error log
