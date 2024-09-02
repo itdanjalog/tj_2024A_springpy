@@ -12,6 +12,10 @@ import java.util.List;
 public class MyService {
 
     @Autowired private MyDao myDao;
+    // [C] 1. 등록
+    public int save( UserDto userDto ){
+        return myDao.save(userDto);
+    }
 
     public List<UserDto> findAll(){
         return myDao.findAll();

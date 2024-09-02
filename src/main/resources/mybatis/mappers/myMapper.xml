@@ -5,8 +5,15 @@
 <!-- xml 주석 -->
 <mapper namespace="example.mybatis.MyDao" >  <!-- mapper start -->
 <!-- namespace=" 매핑할 인터페이스 경로(위치) " -->
-
     <!-- id="매핑할 추상메소드명"  resultType="반환할 타입"  -->
+    <!-- parameterType="매개변수타입"  sql 매개변수 표현 : #{변수명} -->
+
+    <!-- [C] 1. 등록 -->
+    <insert id="save" parameterType="example.mybatis.UserDto">
+        insert into user ( name , age ) values ( #{name} , #{age} )
+    </insert>
+
+    <!-- 2.전체출력 -->
     <select id="findAll" resultType="example.mybatis.UserDto">
         select * from user
     </select>
