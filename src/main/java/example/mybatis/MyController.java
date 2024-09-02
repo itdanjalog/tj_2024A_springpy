@@ -1,10 +1,7 @@
 package example.mybatis;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,22 @@ public class MyController {
     @GetMapping("/findall")
     public List<UserDto> findAll(){
         return myService.findAll();
+    }
+    // [R] 2-2 개별 출력
+    @GetMapping("/find")
+    public UserDto findById( int id){
+        return myService.findById(id);
+    }
+
+    // [R] 3. 수정
+    @PutMapping("/update")
+    public int update( UserDto userDto){
+        return myService.update(userDto);
+    }
+
+    // [D] 4. 삭제
+    @DeleteMapping("/delete")
+    public int delete( int id){
+        return myService.delete(id);
     }
 }
