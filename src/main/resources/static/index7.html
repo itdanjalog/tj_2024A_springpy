@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> 인천광역시 부평구 아파트전월세 통계  </h3>
+    <div id="map" style="width:100%;height:800px;"></div>
+
+    <!-- JQUERY -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ba513b28f3ef573bfee719418a37bab3&libraries=services,clusterer"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        var map = new kakao.maps.Map(document.getElementById('map'), { // 지도를 표시할 div
+            center : new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level : 14 // 지도의 확대 레벨
+        });
+
+        var clusterer = new kakao.maps.MarkerClusterer({
+            map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체
+            averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정
+            minLevel: 10, // 클러스터 할 최소 지도 레벨
+            disableClickZoom: true // 클러스터 마커를 클릭했을 때 지도가 확대되지 않도록 설정한다
+        });
+
+        // 데이터를 가져오기 위해 jQuery를 사용합니다
+        // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
+        $.get("/download/web/data/chicken.json", function(data) {
+            // 데이터에서 좌표 값을 가지고 마커를 표시합니다
+            // 마커 클러스터러로 관리할 마커 객체는 생성할 때 지도 객체를 설정하지 않습니다
+
+        });
+
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
+
+        // 여러 장소의 주소 목록을 저장합니다
+        var addresses = [ ];
+
+        $.ajax({
+            async : false , method : 'get' , url : 'http://localhost:5000' ,
+            success : r => { console.log(r);
+                addresses = r;
+                // 실제로 주소를 사용하여 마커 추가 함수 호출
+                addMarkersToMap(addresses);
+            }
+        })
+
+        // 주소 좌표를 검색하는 함수를 Promise로 구현
+function getCoordinates(address) {
+    return new Promise(function(resolve, reject) {
+        geocoder.addressSearch(address, function(result, status) {
+            // 정상적으로 검색이 완료됐으면
+            if (status === kakao.maps.services.Status.OK) {
+                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                resolve(coords);
+            } else {
+                reject('Failed to get coordinates for: ' + address);
+            }
+        });
+    });
+}
+
+
+        async function addMarkersToMap(addresses) {
+    var markers = [];
+
+    for (let address of addresses) {
+        try {
+            // 각 주소에 대한 좌표를 동기적으로 검색
+            const coords = await getCoordinates(address.address2);
+
+            // 좌표를 받아 마커 생성
+            var marker = new kakao.maps.Marker({
+                position: coords
+            });
+
+            		// 마커에 클릭 이벤트를 등록한다 (우클릭 : rightclick)
+                kakao.maps.event.addListener(marker, 'click', function() {
+                    alert( address.store );
+                });
+
+            // 클러스터러에 마커 추가
+            clusterer.addMarker(marker);
+            markers.push(marker);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    return markers;  // 생성된 마커 배열 반환 (필요한 경우)
+}
+    </script>
+</body>
+</html>
