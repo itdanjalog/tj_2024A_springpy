@@ -43,6 +43,7 @@ public class ChatController extends TextWebSocketHandler {
 
         System.out.println("session = " + session + ", message = " + message);
         System.out.println( message.getPayload() ); // TextMessage payload=[Hello, Ser..]
+                // 메시지 내용을 DB처리 : 메시지 정보를 DTO 화 해서 ---> SERVICE ---> DAO
 
         // - 특정한 세션으로  받은 메시지 내용들 현재 접속된 다른 세션에게도 전달
             // 1. 모든 접속된 클라이언소켓 하나씩 꺼내기
