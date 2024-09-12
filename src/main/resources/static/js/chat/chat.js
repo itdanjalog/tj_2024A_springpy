@@ -37,7 +37,7 @@ clientSocket.onmessage = ( messageEvent ) => { // e : 매개변수
         msgBox.innerHTML += `<div class="alarmMsgBox">
                                 <span>${ msg.message }</span>
                             </div>`;
-        return // 아래 코드가 실행되지 않도록 함수 종료
+        return // 알람 메시지 HTML 출력후 일반 메시지 HTML 코드가 실행되지 않도록 함수 종료
     }
         // 2-2 일반 메시지
     if( msg.from == nickName  ){ // - 내가 보낸 메시지
