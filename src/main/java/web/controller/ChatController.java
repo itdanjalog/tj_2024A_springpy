@@ -51,9 +51,9 @@ public class ChatController extends TextWebSocketHandler {
              WebSocketSession s = 접속된클라이언트소켓.get(i);
              // 3. 꺼낸 클라이언소켓 정보에 메시지를 보내기
             s.sendMessage( message );
-        }
-    }
-}
+        } // for end
+    } // m end
+} // class end
 
 
 
