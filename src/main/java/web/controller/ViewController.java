@@ -8,12 +8,16 @@ public class ViewController {
 
     @GetMapping("")
     public String index(){
-        return "ㅎㅇ";   // templates 폴더내 반환할 경로와 파일명
+        return "index.html";   // templates 폴더내 반환할 경로와 파일명
     }
 
     @GetMapping("/chat")
     public String chat(){
         return "/chat/chat.html";   // templates 폴더내 반환할 경로와 파일명
+    }
+    @GetMapping("/chat/openai")
+    public String openai(){
+        return "/chat/openai.html";   // templates 폴더내 반환할 경로와 파일명
     }
 
 }

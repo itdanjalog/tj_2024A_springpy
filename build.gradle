@@ -15,7 +15,12 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
 }
+ext {
+    set('springAiVersion', "1.0.0-M2")
+}
+
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web' // 스프링 웹
@@ -26,7 +31,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-websocket' // 웹소켓 라이브러리
     // [4] 타임리프 템플릿 라이브러리
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // Spring AI
+//    implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter'
+    implementation 'org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter'
 }
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
+    }
+}
+
 
 tasks.named('test') {
     useJUnitPlatform()
